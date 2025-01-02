@@ -1,6 +1,6 @@
 import { queryClient } from "./queryClient";
 
-interface CryptoPrice {
+interface CryptoPrie {
   [key: string]: {
     usd: number;
   };
