@@ -144,12 +144,29 @@ export function PortfolioTracker() {
     ? ((totalValue - totalInvestment) / totalInvestment) * 100 
     : 0;
 
-  const handleDeleteInvestment = (id: string) => {
-    setPortfolio(prevPortfolio => prevPortfolio.filter(item => item.id !== id));
-    toast({
-      title: "Investment removed",
-      description: "The investment has been removed from your portfolio.",
-    });
+  const handleDeleteInvestment = async (id: number) => {
+    try {
+      const response = await fetch(`/api/portfolio/${id}`, {
+        method: 'DELETE',
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to delete investment');
+      }
+      
+      setPortfolio(prevPortfolio => prevPortfolio.filter(item => item.id !== id));
+      toast({
+        title: "Investment removed",
+        description: "The investment has been removed from your portfolio.",
+      });
+    } catch (error) {
+      console.error('Error deleting investment:', error);
+      toast({
+        title: "Error",
+        description: "Failed to delete investment. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const onSubmit = async (data: AddInvestmentInput) => {
