@@ -2,7 +2,9 @@
 # Start trakcing your investment today with Gainr
 https://gainr.replit.app/
 
-**3 tabs**  
--Calculator: calculates a what if scenario based on live stock prices. shows u how much u can earn if you sell now or if u sell at another price.  
--Portfolio: tracks your current investments portfolio to show prof or loss  
--News: shows u live news from each coin.
+**What is Gainr?**
+
+**Live Data Integration:** Gainr pulls the latest crypto prices in real time, helping you make informed decisions without resorting to manual spreadsheets.
+**Profit/Loss Calculator:** Quickly see potential returns and final take-home amounts so you don’t have to hunt for a separate tool or juggle Excel formulas.
+**Portfolio Tracker:** Keep tabs on your holdings with immediate, real-time updates on your overall profit or loss.
+**Crypto News Feed:** Stay up to date with market changes and announcements—all under one roof.
